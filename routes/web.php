@@ -11,6 +11,11 @@
 |
 */
 
+use Intervention\Image\Facades\Image;
+use Spatie\Browsershot\Browsershot;
+
 Route::get('/', function () {
-    return view('welcome');
+    return Image::make(
+        Browsershot::html('<h1>Webwide</h1>')->screenshot()
+    )->response('jpg');
 });
