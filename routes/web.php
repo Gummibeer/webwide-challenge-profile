@@ -16,6 +16,6 @@ use Spatie\Browsershot\Browsershot;
 
 Route::get('/', function () {
     return Image::make(
-        Browsershot::html('<h1>Webwide</h1>')->screenshot()
+        Browsershot::html('<h1>Webwide</h1>')->noSandbox()->screenshot()
     )->response('jpg');
 });
