@@ -11,9 +11,7 @@
         "php": "^7.2",
         "ext-imagick": "*",
         "fideloper/proxy": "^4.0",
-        "intervention/image": "^2.5",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0",
         "spatie/browsershot": "^3.33"
     },
     "require-dev": {

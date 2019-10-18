@@ -11,11 +11,10 @@
 |
 */
 
-use Intervention\Image\Facades\Image;
 use Spatie\Browsershot\Browsershot;
 
 Route::get('/', function () {
-    return Image::make(
+    return response(
         Browsershot::html('<h1>Webwide</h1>')->noSandbox()->screenshot()
-    )->response('jpg');
+    )->header('Content-type','image/png');
 });
